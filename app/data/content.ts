@@ -68,6 +68,18 @@ export const posts = [
   },
 ];
 
-export const contactEmail = "hello@outsos.com";
+export const contactEmail = "outsosnarratives@gmail.com";
+const whatsappNumber = "2349056258296";
+const whatsappMessage =
+  "Hi Outsos! I’m looking to build and grow my brand in Dubai and would love to explore how your branding, marketing, and communication services could help. Can we talk about my goals and the right next steps?";
+export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+export const socialLinks = [
+  { label: "X", platform: "x", href: "#" },
+  { label: "Instagram", platform: "instagram", href: "#" },
+  { label: "Facebook", platform: "facebook", href: "#" },
+  { label: "TikTok", platform: "tiktok", href: "#" },
+  { label: "LinkedIn", platform: "linkedin", href: "#" },
+];
 
 export const copyrightYear = 2026;

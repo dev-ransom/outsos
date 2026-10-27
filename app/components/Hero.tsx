@@ -1,4 +1,5 @@
 import { Burst, ScribbleArrow, SparkleOutline, Swirl } from "./Decor";
+import { whatsappUrl } from "../data/content";
 
 export default function Hero() {
   return (
@@ -19,8 +20,8 @@ export default function Hero() {
 
       <div className="hero__cta">
         <ScribbleArrow className="hero__arrow" />
-        <a className="button" href="#contact">
-          Let&rsquo;s Work Together
+        <a className="button" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Let&rsquo;s Talk
         </a>
       </div>
     </section>

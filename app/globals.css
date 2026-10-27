@@ -185,23 +185,23 @@ img {
 }
 
 .logo {
+  position: relative;
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--orange-deep);
+  flex: 0 0 152px;
+  width: 152px;
+  height: 48px;
+  overflow: hidden;
 }
 
-.logo__mark {
-  width: 20px;
-  height: 24px;
-  fill: currentColor;
-}
-
-.logo__word {
-  font-family: var(--ff-heading);
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: -0.02em;
+.logo__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 460px;
+  max-width: none;
+  height: auto;
+  filter: invert(1);
+  transform: translate(-50%, -50%);
 }
 
 .header__nav {
@@ -632,6 +632,15 @@ img {
   gap: 24px;
 }
 
+.footer__contact {
+  display: grid;
+  gap: 8px;
+}
+
+.footer__contact a:hover {
+  color: var(--amber);
+}
+
 .footer__title {
   max-width: 14em;
   font-family: var(--ff-heading);
@@ -653,14 +662,75 @@ img {
   font-size: 14px;
 }
 
-.footer .logo {
-  color: var(--amber);
-}
-
 .footer__nav {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+}
+
+.footer__social {
+  display: grid;
+  gap: 8px;
+}
+
+.footer__social-label {
+  color: #a9a9a9;
+}
+
+.footer__social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer__social-link {
+  display: grid;
+  width: 44px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--orange);
+  border-radius: 50%;
+  color: #f5f2ed;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.footer__social-link[href]:hover {
+  border-color: var(--amber);
+  background: var(--gradient-glow);
+  color: #141414;
+  transform: translateY(-3px);
+}
+
+.footer__social-link:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 4px;
+}
+
+.footer__social-link svg rect,
+.footer__social-link svg circle:not(.social-icon__dot) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.footer__social-link .social-icon__dot {
+  fill: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer__social-link {
+    transition: none;
+  }
 }
 
 .footer__nav a:hover {
